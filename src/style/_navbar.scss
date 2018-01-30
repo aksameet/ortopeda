@@ -1,0 +1,133 @@
+.navbar {
+    display: none;
+    position: absolute;
+    padding: 0;
+    top: 7vmin;
+    left: 15vmin;
+    right: 15vmin;
+    @include SmallDevice {
+        left: 20vmin;
+        right: 20vmin;
+    }
+    z-index: 3;
+    overflow: hidden;
+    text-align: center;
+    justify-content: space-between;
+    transform: rotateX(90deg);
+    transition: transform 0.4s ease-in-out;
+    .nav-link {
+        flex: 1;
+        border: 1px solid rgba(204, 153, 33, 0.7);
+        color: rgba(204, 153, 33, 0.7);
+        text-transform: uppercase;
+        @media(min-width: 768px) {
+            padding: 1.4rem;
+        }
+        @media(min-width: 480px) {
+            padding: 1.1rem;
+        }
+    }
+    &.active {
+        display: block;
+    }
+}
+
+// ************* CUBES *************
+.nav-cube {
+    display: flex;
+    width: 8vmin;
+    height: 8vmin;
+    @include MediumDevice {
+        width: 10vmin;
+        height: 10vmin;
+    }
+    @include SmallDevice {
+        width: 12vmin;
+        height: 12vmin;
+    }
+    position: absolute;
+    top: 3vmin;
+    right: 3vmin;
+    z-index: 100;
+    background-color: rgba(50, 55, 63, 0.8);
+    cursor: pointer;
+    border: 1px solid rgba(204, 153, 33, 0.7);
+}
+
+.nav-cube span:after,
+.nav-cube span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -13px;
+}
+
+.nav-cube span:after {
+    top: 13px;
+}
+
+.nav-cube span {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+.nav-cube span,
+.nav-cube span:after,
+.nav-cube span:before {
+    height: 3px;
+    background-color: rgba(204, 153, 33, 0.8);
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+.nav-cube span:after,
+.nav-cube span:before {
+    width: 100%;
+}
+
+.nav-cube {
+    &.on {
+        span {
+            background-color: transparent;
+            &:before {
+                transform: rotate(45deg) translate(10px, 8px)
+            }
+            &:after {
+                transform: rotate(-45deg) translate(9px, -9px)
+            }
+        }
+        &~.navbar {
+            transition: transform 0.4s ease-in-out;
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+.logo-cube {
+    display: flex;
+    width: 8vmin;
+    height: 8vmin;
+    @include MediumDevice {
+        width: 10vmin;
+        height: 10vmin;
+    }
+    @include SmallDevice {
+        width: 12vmin;
+        height: 12vmin;
+    }
+    position: absolute;
+    top: 3vmin;
+    left: 3vmin;
+    z-index: 100;
+    background-color: rgba(50, 55, 63, 0.8);
+    cursor: pointer;
+    border: 1px solid rgba(204, 153, 33, 0.7);
+    img {
+        margin: auto;
+        width: 80%;
+        height: 80%;
+    }
+}

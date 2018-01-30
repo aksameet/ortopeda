@@ -1,3 +1,16 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+// Styles
+html {
+    box-sizing: border-box;
+}
+
 body {
     background-color: dimgrey;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
