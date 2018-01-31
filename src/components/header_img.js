@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import xRayImg from '../assets/images/x-ray.png';
-
+import TiltEffect from '../libs/tilt-effect';
 export default class HeaderImg extends Component {
+
+    componentDidMount() {
+        TiltEffect(window);
+    }
+
     render() {
         return (
             <div className="main-img">
-                <img src={xRayImg} alt='Specjalistyczny Gabinet Lekarski Janusz Jaskowicz'/>
+                <img 
+                    className='tilt-effect'
+                    src={xRayImg} 
+                    alt='Specjalistyczny Gabinet Lekarski Janusz Jaskowicz'
+                    data-tilt-options='{ "opacity" : 0.6, "extraImgs" : 4, "movement": { "perspective" : 500, "translateX" : 15, "translateY" : 0, "translateZ" : 10, "rotateX" : 3, "rotateY" : 4, "rotateZ" : 1 } }'
+                />
                 <div className="main-img-wrapper">
                     <div className="main-img-text">
                         <h1>
