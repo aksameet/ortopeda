@@ -27,13 +27,15 @@ class Obszary extends Component {
         this.renderTitles();
         return (
             <div className="obszary">
-                <h2 className="obszary-header">
-                    <span>Obszary specjalizacji</span>
-                </h2>
-                <ul className="obszary-list">
-                    { this.renderTitles() }
-                </ul>
-                <Obszar />
+                <div className='obszary-wrapper'>
+                    <h2 className="obszary-header">
+                        <span>Obszary specjalizacji</span>
+                    </h2>
+                    <ul className="obszary-list">
+                        { this.renderTitles() }
+                    </ul>
+                    <Obszar />
+                </div>
             </div>
         )
     }
