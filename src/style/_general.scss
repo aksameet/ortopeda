@@ -1,12 +1,31 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One');
 // Styles
 html {
     box-sizing: border-box;
 }
 
 body {
-    background-color: dimgrey;
+    height: 100%;
+    position: relative;
+    &:after {
+        content: '';
+        background-image: url('../assets/images/spine.png');
+        -webkit-filter: contrast(110%);
+        filter: contrast(110%);
+        background-repeat: no-repeat, repeat;
+        background-size: auto 100%;
+        background-position: center;
+        position: absolute;
+        opacity: 0.6;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
 }
 
 *,
