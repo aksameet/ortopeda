@@ -15,3 +15,31 @@
         @content;
     }
 }
+
+@mixin listNumbersColors {
+    &> :nth-child(1) {
+        &> :nth-child(1) {
+            background-color: rgb(214, 168, 62);
+        }
+    }
+    &> :nth-child(2) {
+        &>:nth-child(1) {
+            background-color: rgb(199, 83, 58);
+        }
+    }
+    &>:nth-child(3) {
+        &>:nth-child(1) {
+            background-color: rgb(119, 45, 31);
+        }
+    }
+    &>:nth-child(4) {
+        &>:nth-child(1) {
+            background-color: rgb(90, 105, 72);
+        }
+    }
+    &>:nth-child(5) {
+        &>:nth-child(1) {
+            background-color: rgb(160, 151, 68)
+        }
+    }
+}

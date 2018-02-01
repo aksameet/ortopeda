@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './navbar';
-import HeaderImg from './header_img';
+import HeaderImg from '../containers/header_img';
 import Variety from './variety';
-import Infographics from './infographics';
+import Obszary from '../containers/obszary';
 import About from './about';
 import Contact from './contact';
 
@@ -12,9 +12,9 @@ export default class App extends Component {
 			<div className=''>
 				<NavBar />
 				<HeaderImg />
-				<Variety />
-				<Infographics />
+				<Obszary />
 				<About />
+				<Variety />
 				<Contact />
 			</div>
 		);

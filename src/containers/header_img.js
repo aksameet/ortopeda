@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import xRayImg from '../assets/images/x-ray.png';
 import TiltEffect from '../libs/tilt-effect';
-export default class HeaderImg extends Component {
+import Images from '../assets/images.js';
+
+class HeaderImg extends Component {
 
     componentDidMount() {
         TiltEffect(window);
     }
 
     render() {
+
         return (
             <div className="main-img">
                 <img 
                     className='tilt-effect'
-                    src={xRayImg} 
+                    src={Images.xray} 
                     alt='Specjalistyczny Gabinet Lekarski Janusz Jaskowicz'
                     data-tilt-options='{ "opacity" : 0.6, "extraImgs" : 4, "movement": { "perspective" : 500, "translateX" : 15, "translateY" : 0, "translateZ" : 10, "rotateX" : 3, "rotateY" : 4, "rotateZ" : 1 } }'
                 />
@@ -20,9 +22,9 @@ export default class HeaderImg extends Component {
                     <div className="main-img-text">
                         <h1>
                             Dobry lekarz<br />
-                            <strong>leczy chorobę,</strong>
+                            <strong>leczy schorzenie,</strong>
                             <br />wybitny<br />
-                            <strong>pacjenta, który zachorował</strong>.
+                            <strong>pacjenta, który ma schorzenie</strong>.
                             <br />
                             <i className="ghandi">- William Osler</i>
                         </h1>
@@ -32,3 +34,5 @@ export default class HeaderImg extends Component {
         )
     }
 }
+
+export default HeaderImg;
