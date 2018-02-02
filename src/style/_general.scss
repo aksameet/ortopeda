@@ -10,22 +10,6 @@ html {
 body {
     height: 100%;
     position: relative;
-    &:after {
-        content: '';
-        background-image: url('../assets/images/spine.png');
-        -webkit-filter: contrast(110%);
-        filter: contrast(110%);
-        background-repeat: no-repeat, repeat;
-        background-size: auto 100%;
-        background-position: center;
-        position: absolute;
-        opacity: 0.6;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-    }
 }
 
 *,

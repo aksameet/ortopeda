@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from './navbar';
 import HeaderImg from '../containers/header_img';
-import Variety from './variety';
 import Obszary from '../containers/obszary';
 import About from './about';
+import Zakres from '../containers/zakresUslug';
 import Contact from './contact';
 
 export default class App extends Component {
@@ -14,7 +14,7 @@ export default class App extends Component {
 				<HeaderImg />
 				<Obszary />
 				<About />
-				<Variety />
+				<Zakres />
 				<Contact />
 			</div>
 		);
