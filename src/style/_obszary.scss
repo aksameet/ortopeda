@@ -7,6 +7,7 @@
         max-width: 1100px;
         display: flex;
         flex-wrap: wrap;
+        position: relative;
     }
     &-header {
         font-family: 'Rambla', sans-serif;
@@ -65,11 +66,10 @@
     }
     &-content {
         max-width: calc(65% - 60px);
-        position: relative;
         margin-left: 60px;
         display: flex;
         &-description {
-            margin: auto 0;
+            margin: 0 0 auto;
             position: relative;
             z-index: 2;
             h3 {
@@ -88,14 +88,12 @@
         }
         &-img {
             position: absolute;
-            top: 0;
             bottom: 0;
-            left: 0;
             right: 0;
-            width: 100%;
+            max-width: calc(65% - 20px);
             height: 100%;
             z-index: 1;
-            opacity: 0.3;
+            opacity: 0.2;
         }
     }
 }
