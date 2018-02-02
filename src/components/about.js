@@ -34,6 +34,7 @@ export default class About extends Component {
                         Czytaj {`${this.state.isActive ? 'mniej' : 'dalej'}`}
                     </button>
                 </div>
+                <img className='about-ortho-img' src={Images.ortho} alt="" />
             </div>
         )
     }
