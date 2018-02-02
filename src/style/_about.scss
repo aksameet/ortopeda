@@ -63,7 +63,7 @@
         }
         p {
             font-size: 2.5vmin;
-            text-shadow: 0 0 1px rgba(226, 152, 121, 0.3);
+            text-shadow: 0 0 1px rgba(226, 152, 121, 0.4);
             text-align: left;
             margin-bottom: 25px;
             position: relative;
@@ -78,10 +78,20 @@
             padding: 10px 20px;
             color: #fff;
             background-color: rgb(186, 87, 71);
-            border: 1px solid rgb(148, 81, 74);
+            border: 2px solid rgb(148, 81, 74);
             border-radius: 3px;
             position: relative;
             z-index: 1;
+            &:hover {
+                cursor: pointer;
+            }
+            &:focus {
+                outline: 0;
+            }
+            &:active {
+                background-color: rgb(148, 81, 74);
+                border: 2px solid rgb(186, 87, 71);
+            }
         }
     }
     .off {
