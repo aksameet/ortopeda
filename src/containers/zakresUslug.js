@@ -5,7 +5,10 @@ class ZakresUslug extends Component {
     renderZakresy(zakres) {
         return (
             <div className='zakres-item' key={zakres.zakres}>
-                {zakres.zakres}
+                <div className='zakres-item-img'>
+                    <img src={zakres.img} alt=""/>
+                </div>
+                <span className='zakres-item-description'>{zakres.zakres}</span>
             </div>
         )
     }
