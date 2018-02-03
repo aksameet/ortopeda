@@ -43,6 +43,7 @@
                 &.active {
                     background-color: rgb(141, 121, 155);
                     border-color: rgb(141, 121, 155);
+                    pointer-events: none;
                 }
             }
         }
