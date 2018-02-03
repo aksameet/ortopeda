@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react'
 import { AsyncMap } from '../components/async_map';
+import MapStyles from '../components/map-styles';
+import markerIcon from '../assets/icons/marker.svg';
 
 
 export default class Contact extends Component {
@@ -17,12 +19,17 @@ export default class Contact extends Component {
 
 			self.map = new google.maps.Map(self.refs.map, { 
 				center: myLatLng,
-				zoom: 14 
+                zoom: 14,
+                styles: MapStyles()
 			});
 
 			new google.maps.Marker({
 				position: myLatLng,
-				map: self.map,
+                map: self.map,
+                icon: {
+					url: markerIcon,
+					scaledSize: new google.maps.Size(46, 46)
+				},
 			});
 		});
     }
@@ -35,8 +42,12 @@ export default class Contact extends Component {
                         <span>Gabinet</span>
                     </h1>
                     <div className='contact-item'>
-                        <div className="contact-item-a">A</div>
-                        <div className="contact-item-b">B</div>
+                        <div className="contact-item-a">
+                            <button>Gabinet A</button>
+                        </div>
+                        <div className="contact-item-b">
+                            <button>Gabinet A</button>
+                        </div>
                     </div>
                     <div className='contact-map' ref='map'>
                         Loading Map...
