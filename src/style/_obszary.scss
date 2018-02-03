@@ -10,21 +10,12 @@
         position: relative;
     }
     &-header {
-        font-family: 'Rambla', sans-serif;
-        font-weight: bold;
-        letter-spacing: -2px;
-        width: 100%;
-        text-transform: uppercase;
-        font-size: 6vmin;
-        text-shadow: 0 0 3px rgba(255, 255, 255, 1);
-        margin-bottom: 80px;
-        span {
-            border-top: 2px solid #333;
-            border-bottom: 2px solid #333;
-            padding: 0 25px 0 0;
-            display: inline-block;
-            min-width: 50%;
-        }
+        $color: rgb(26, 26, 26);
+        $border: 2px solid #333;
+        $shadow: 0 0 3px rgba(255, 255, 255, 1);
+        $align: left;
+        $variants: ( $color, $border, $shadow, $align);
+        @include Header ($variants);
     }
     &-list {
         width: 35%;
