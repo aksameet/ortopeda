@@ -21,7 +21,7 @@
         text-transform: uppercase;
         font-size: 6vmin;
         text-shadow: 0 0 1px rgba(86, 97, 102, 1);
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         text-align: right;
         span {
             border-top: 2px solid rgb(220, 222, 214);
@@ -106,11 +106,11 @@
     &-ortho-img {
         position: absolute;
         z-index: 1;
-        right: -30%;
+        right: -15%;
         width: 60%;
         height: 100%;
         top: 0;
         bottom: 0;
-        opacity: 0.2;
+        opacity: 0.1;
     }
 }

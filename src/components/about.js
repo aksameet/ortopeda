@@ -31,7 +31,7 @@ export default class About extends Component {
                     <button 
                         className='about-content-read_more'
                         onClick={() => this.setState({isActive: !this.state.isActive})}>
-                        Czytaj {`${this.state.isActive ? 'mniej' : 'dalej'}`}
+                        {`${this.state.isActive ? 'Zwiń' : 'Czytaj dalej'}`}
                     </button>
                 </div>
                 <img className='about-ortho-img' src={Images.ortho} alt="" />
