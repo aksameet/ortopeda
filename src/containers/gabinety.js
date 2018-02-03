@@ -104,13 +104,13 @@ class Gabinety extends Component {
                             <button 
                                 value='0'
                                 onClick={this.targetGabinet}
-                                className={this.state.isActive ? 'active' : ''}>
+                                className={this.state.isActive ? '' : 'active'}>
                                 {this.props.gabinety[0].miasto}
                             </button>
                             <button
                                 value='1'
                                 onClick={this.targetGabinet}
-                                className={this.state.isActive ? '' : 'active'}>
+                                className={this.state.isActive ? 'active' : ''}>
                                 {this.props.gabinety[1].miasto}
                             </button>
                         </div>
