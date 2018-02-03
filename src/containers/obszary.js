@@ -24,7 +24,6 @@ class Obszary extends Component {
         )
     }
     render() {
-        this.renderTitles();
         return (
             <div className="obszary">
                 <div className='obszary-wrapper'>

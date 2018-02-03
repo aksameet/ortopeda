@@ -16,6 +16,27 @@
     }
 }
 
+@mixin Header ($variants) {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    font-family: 'Rambla', sans-serif;
+    font-weight: bold;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    font-size: 6vmin;
+    margin-bottom: 80px;
+    color: nth($variants, 1);
+    text-shadow: nth($variants, 3);
+    text-align: nth($variants, 4);
+    span {
+        display: inline-block;
+        min-width: 50%;
+        border-top: nth($variants, 2);
+        border-bottom: nth($variants, 2);
+    }
+}
+
 @mixin listNumbersColors {
     &> :nth-child(1) {
         &> :nth-child(1) {
