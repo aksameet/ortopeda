@@ -76,7 +76,7 @@
             border-color: rgb(172, 217, 170);
             background-color: rgb(172, 217, 170);
             img {
-                background-color: rgb(190, 171, 129);
+                background-color: transparent;
             }
         }
     }
@@ -126,8 +126,8 @@
     }
     &> :nth-child(11) {
         &>:nth-child(1) {
-            border-color: rgb(94, 153, 131);
-            background-color: rgb(94, 153, 131);
+            border-color: rgb(99, 186, 106);
+            background-color: rgb(99, 186, 106);
             img {
                 background-color: rgba(242, 243, 238, 1);
             }
