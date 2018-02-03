@@ -97,7 +97,7 @@ class Gabinety extends Component {
             <div className='gabinet'>
                 <div className='gabinet-wrapper'>
                     <h1 className='gabinet-header'>
-                        <span>Gabinet</span>
+                        <span>Gabinety</span>
                     </h1>
                     <div className='gabinet-item'>
                         <div className='gabinet-item-buttons'>
@@ -116,10 +116,10 @@ class Gabinety extends Component {
                         </div>
                         <Gabinet />
                     </div>
-                    <div className='gabinet-map' ref='map'>
+                </div>
+                <div className='gabinet-map' ref='map'>
                         Loading Map...
                     </div>
-                </div>
             </div>
         )
     }
