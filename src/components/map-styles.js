@@ -3,7 +3,7 @@ export default () => [
       "elementType": "geometry",
       "stylers": [
         {
-          "color": "#1d2c4d"
+          "color": "#21282a"
         }
       ]
     },

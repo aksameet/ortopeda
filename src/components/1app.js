@@ -4,7 +4,7 @@ import HeaderImg from '../containers/header_img';
 import Obszary from '../containers/obszary';
 import About from './about';
 import Zakres from '../containers/zakresUslug';
-import Contact from '../containers/contact';
+import Gabinet from '../containers/gabinety';
 
 export default class App extends Component {
 	render() {
@@ -15,7 +15,7 @@ export default class App extends Component {
 				<Obszary />
 				<About />
 				<Zakres />
-				<Contact />
+				<Gabinet />
 			</div>
 		);
 	}
