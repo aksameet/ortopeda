@@ -15,7 +15,7 @@
     }
     &-header {
         $color: rgb(85, 85, 84);
-        $border: 2px solid #333;
+        $border: 2px solid rgb(85, 85, 84);
         $shadow: 0 0 3px rgba(255, 255, 255, 1);
         $align: left;
         $variants: ($color, $border, $shadow, $align);

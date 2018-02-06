@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { wybierzGabinet } from '../actions/index';
 import { bindActionCreators } from 'redux';
-import { AsyncMap } from '../components/async_map';
-import MapStyles from '../components/map-styles';
+import { AsyncMap } from '../components/googleMap/async_map';
+import MapStyles from '../components/googleMap/map-styles';
 import markerIcon from '../assets/icons/marker.svg';
 
-import Gabinet from './gabinet';
+import Gabinet from '../components/gabinet';
 
 class Gabinety extends Component {
 
@@ -97,7 +97,7 @@ class Gabinety extends Component {
             <div className='gabinet'>
                 <div className='gabinet-wrapper'>
                     <h1 className='gabinet-header'>
-                        <span>Gabinet</span>
+                        <span>Gabinety</span>
                     </h1>
                     <div className='gabinet-item'>
                         <div className='gabinet-item-buttons'>
@@ -114,12 +114,12 @@ class Gabinety extends Component {
                                 {this.props.gabinety[1].miasto}
                             </button>
                         </div>
-                        <Gabinet />
-                    </div>
-                    <div className='gabinet-map' ref='map'>
-                        Loading Map...
+                        <Gabinet gabinety={this.props.gabinety} gabinet={this.props.gabinet} />
                     </div>
                 </div>
+                <div className='gabinet-map' ref='map'>
+                        Loading Map...
+                    </div>
             </div>
         )
     }

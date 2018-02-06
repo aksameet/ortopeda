@@ -5,6 +5,7 @@ import Obszary from '../containers/obszary';
 import About from './about';
 import Zakres from '../containers/zakresUslug';
 import Gabinet from '../containers/gabinety';
+import Footer from '../components/footer';
 
 export default class App extends Component {
 	render() {
@@ -16,6 +17,7 @@ export default class App extends Component {
 				<About />
 				<Zakres />
 				<Gabinet />
+				<Footer />
 			</div>
 		);
 	}
