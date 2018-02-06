@@ -35,15 +35,15 @@
         &-buttons {
             width: 100%;
             button {
-                color: rgb(221, 221, 226);
+                color: rgb(163, 159, 159);
                 cursor: pointer;
                 outline: 0;
                 width: 50%;
                 padding: 5px;
                 background-color: rgb(88, 85, 114);
-                border-color: rgb(88, 85, 114);
-                border-bottom: 2px solid rgb(88, 85, 114);
+                border: 2px solid rgb(88, 85, 114);
                 &.active {
+                    color: rgb(226, 226, 240);
                     background-color: rgb(141, 121, 155);
                     border-color: rgb(141, 121, 155);
                     pointer-events: none;

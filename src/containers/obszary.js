@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { wybierzObszar } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
-import Obszar from './obszar';
+import Obszar from '../components/obszar';
 
 class Obszary extends Component {
     renderTitles() {
@@ -33,7 +33,7 @@ class Obszary extends Component {
                     <ul className="obszary-list">
                         { this.renderTitles() }
                     </ul>
-                    <Obszar />
+                    <Obszar obszary={this.props.obszary} obszar={this.props.obszar}/>
                 </div>
             </div>
         )
@@ -42,7 +42,8 @@ class Obszary extends Component {
 
 function mapStateToProps(state) {
 	return {
-		obszary: state.obszary
+        obszary: state.obszary,
+        obszar: state.activeObszar
 	}
 }
 
