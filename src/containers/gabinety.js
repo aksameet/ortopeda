@@ -94,7 +94,7 @@ class Gabinety extends Component {
 			this.renderNewLocation();
 		}
         return (
-            <div className='gabinet'>
+            <div className='gabinet' id='gabinet'>
                 <div className='gabinet-wrapper'>
                     <h1 className='gabinet-header'>
                         <span>Gabinety</span>

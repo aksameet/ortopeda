@@ -14,7 +14,9 @@ class Obszary extends Component {
 						key={obszar.obszar}
 						onClick={() => this.props.wybierzObszar(obszar)}
 						className='obszary-list-item'> 
-                            <span className='obszary-list-item-number'>{idx + 1}</span> 
+                            <div className='obszary-list-item-number'>
+                                <span>{idx + 1}</span>
+                            </div> 
                             <span className='obszary-list-item-obszar'>
                                 <p>{obszar.obszar}</p>
                             </span>
@@ -25,7 +27,7 @@ class Obszary extends Component {
     }
     render() {
         return (
-            <div className="obszary">
+            <div className="obszary" id='obszary'>
                 <div className='obszary-wrapper'>
                     <h2 className="obszary-header">
                         <span>Obszary specjalizacji</span>

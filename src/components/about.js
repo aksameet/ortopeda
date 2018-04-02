@@ -11,7 +11,7 @@ export default class About extends Component {
     }
     render() {
         return (
-            <div className="about">
+            <div className="about" id="about">
                 <div className='about-wrapper'>
                     <h2 className='about-header'>
                         <span>O mnie</span>

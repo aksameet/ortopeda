@@ -11,7 +11,7 @@ class HeaderImg extends Component {
     render() {
 
         return (
-            <div className="main-img">
+            <div className="main-img" id='home'>
                 <img 
                     className='tilt-effect'
                     src={Images.xray} 

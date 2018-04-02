@@ -16,9 +16,9 @@
     transform: rotateX(90deg);
     transition: transform 0.4s ease-in-out;
     .nav-link {
+        background-color: transparent;
         flex: 1;
         border: 1px solid rgba(204, 153, 33, 0.7);
-        color: rgba(204, 153, 33, 0.7);
         text-transform: uppercase;
         @media(min-width: 768px) {
             padding: 1.4rem;
@@ -29,6 +29,27 @@
     }
     &.active {
         display: block;
+        background-color: rgba(204, 153, 33, 0.7);
+        ;
+    }
+}
+
+.stickyNav {
+    position: fixed;
+    padding: 0;
+    top: 3vmin;
+    left: 15vmin;
+    right: 15vmin;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    text-shadow: 0 0 2px rgba(226, 152, 121, 0.4);
+    @media (max-width: 1000px) {
+        font-size: 14px;
+    }
+    @media (max-width: 890px) {
+        font-size: 12px;
     }
 }
 
@@ -52,6 +73,13 @@
     background-color: rgba(50, 55, 63, 0.8);
     cursor: pointer;
     border: 1px solid rgba(204, 153, 33, 0.7);
+}
+
+.sticky {
+    position: fixed !important;
+    z-index: 100;
+    top: 3vmin;
+    right: 3vmin;
 }
 
 .nav-cube span:after,

@@ -14,7 +14,7 @@ class ZakresUslug extends Component {
     }
     render() {
         return (
-            <div className='zakres'>
+            <div className='zakres' id='zakres'>
                 <div className='zakres-wrapper'>
                     <h2 className="zakres-header">
                         <span>Zakres usług gabinetu</span>

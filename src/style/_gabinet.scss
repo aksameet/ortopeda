@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: rgb(22, 61, 86);
     position: relative;
+    overflow: hidden;
     &-wrapper {
         @include WrapperSizing;
         height: 100%;
@@ -21,7 +22,7 @@
     &-item {
         color: rgb(241, 242, 243);
         width: 35%;
-        height: 50vh;
+        height: 60vh;
         max-height: 500px;
         padding: 10px;
         position: absolute;
@@ -30,6 +31,13 @@
         z-index: 3;
         background-color: rgb(88, 85, 114);
         border-radius: 3px;
+        @media (max-width: 750px) {
+            width: auto;
+            height: 40vh;
+            left: 7vmin;
+            right: 7vmin;
+            top: 26vmin;
+        }
         &-buttons {
             width: 100%;
             button {
@@ -40,6 +48,7 @@
                 padding: 5px;
                 background-color: rgb(88, 85, 114);
                 border: 2px solid rgb(88, 85, 114);
+                box-sizing: border-box;
                 &.active {
                     color: rgb(226, 226, 240);
                     background-color: rgb(141, 121, 155);
@@ -52,7 +61,8 @@
     &-data {
         padding: 10px;
         background-color: rgb(141, 121, 155);
-        height: calc(100% - 45px);
+        height: calc(100% - 60px);
+        max-height: 490px
     }
     &-map {
         position: absolute!important;
