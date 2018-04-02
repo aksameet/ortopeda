@@ -1,3 +1,4 @@
+// MIXINS
 @mixin BigDevice {
     @media(min-width: 1200px) {
         @content;
@@ -16,6 +17,7 @@
     }
 }
 
+// HEADER STYLES
 @mixin Header ($variants) {
     width: 100%;
     position: relative;
@@ -35,6 +37,14 @@
         border-top: nth($variants, 2);
         border-bottom: nth($variants, 2);
     }
+}
+
+// WRAPPER
+@mixin WrapperSizing {
+    padding: 25vmin 8vmin;
+    box-sizing: content-box;
+    margin: auto;
+    max-width: 1100px;
 }
 
 @mixin listNumbersColors {

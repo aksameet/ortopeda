@@ -4,9 +4,7 @@
     overflow: hidden;
     position: relative;
     &-wrapper {
-        padding: 25vmin 8vmin;
-        margin: auto;
-        max-width: 1100px;
+        @include WrapperSizing;
         display: flex;
         flex-wrap: wrap;
     }
