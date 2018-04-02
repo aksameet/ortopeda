@@ -1,0 +1,67 @@
+.zakres {
+    width: 100%;
+    background-color: rgba(242, 243, 238, 1);
+    &-wrapper {
+        @include WrapperSizing;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        @include iconsStyling;
+    }
+    &-header {
+        $color: rgb(85, 85, 84);
+        $border: 2px solid rgb(85, 85, 84);
+        $shadow: 0 0 3px rgba(255, 255, 255, 1);
+        $align: left;
+        $variants: ($color, $border, $shadow, $align);
+        @include Header ($variants);
+    }
+    &-item {
+        width: 50%;
+        display: flex;
+        margin-bottom: 60px;
+        @media(max-width: 775px) {
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+        &> :nth-child(even) {
+            padding-right: 2vw;
+            @media(max-width: 775px) {
+                padding-right: 0;
+            }
+        }
+        &-img {
+            margin: auto 0;
+            display: block;
+            border-radius: 50%;
+            border: 7px solid;
+            padding: 7px;
+            img {
+                border-radius: 50%;
+                width: 80px;
+                height: 80px;
+                margin: 0;
+                @media(max-width: 775px) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        &-description {
+            margin: auto 0 auto 35px;
+            @media(max-width: 775px) {
+                margin: auto 0 auto 15px;
+                text-shadow: 0 0 1px rgba(86, 97, 102, 1);
+                color: rgb(188, 90, 78);
+            }
+            display: block;
+            color: rgb(122, 122, 122);
+            font-family: 'Cormorant Garamond',
+            serif;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 22px;
+        }
+    }
+}

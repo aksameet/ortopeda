@@ -1,0 +1,120 @@
+.obszary {
+    width: 100%;
+    background-color: rgba(242, 243, 238, 1);
+    position: relative;
+    &-wrapper {
+        @include WrapperSizing;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-header {
+        $color: rgb(26, 26, 26);
+        $border: 2px solid #333;
+        $shadow: 0 0 3px rgba(255, 255, 255, 1);
+        $align: left;
+        $variants: ( $color, $border, $shadow, $align);
+        @include Header ($variants);
+    }
+    &-list {
+        width: 35%;
+        height: 400px;
+        @include listNumbersColors;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        &-item {
+            display: flex;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            list-style: none;
+            background-color: #000;
+            color: rgb(133, 148, 156);
+            margin-bottom: 3px;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+                z-index: 3;
+            }
+            &-number {
+                box-sizing: border-box;
+                height: 100%;
+                padding: 20px;
+                @include MediumDevice {
+                    padding: 10px;
+                }
+                color: #ddd;
+                font-size: 1.6vmin;
+                display: flex;
+                &>span {
+                    text-align: center;
+                    width: 20px;
+                    margin: auto;
+                }
+            }
+            &-obszar {
+                display: flex;
+                padding-left: 20px;
+                font-size: 1.4vmin;
+                height: 100%;
+                p {
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+    &-content {
+        max-width: calc(65% - 60px);
+        margin-left: 60px;
+        @include MediumDevice {
+            margin-left: 40px;
+        }
+        @include SmallDevice {
+            margin-left: 20px;
+        }
+        display: flex;
+        overflow: scroll;
+        height: 500px;
+        &-description {
+            margin: 0 0 auto;
+            position: relative;
+            z-index: 2;
+            h3 {
+                font-size: 40px;
+                @include MediumDevice {
+                    font-size: 30px;
+                }
+                @include SmallDevice {
+                    font-size: 25px;
+                }
+                text-shadow: 0 0 1px rgba(86, 97, 102, 1);
+                margin-bottom: 25px;
+                color: rgb(188, 90, 78);
+            }
+            p,
+            li {
+                text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+                text-align: justify;
+                text-justify: inter-word;
+                font-size: 25px;
+                @include MediumDevice {
+                    font-size: 18px;
+                }
+                @include SmallDevice {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: calc(65% - 20px);
+            height: 100%;
+            z-index: 1;
+            opacity: 0.16;
+        }
+    }
+}
