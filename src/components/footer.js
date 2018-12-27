@@ -5,7 +5,9 @@ export default class Footer extends Component {
     render() {
         return (
             <div className='footer' >
-                Copyright <img src={Copyright} alt=''/> 2018 Janusz Jaskowicz. All rights Reserved.
+                <span>
+                    Copyright <img src={Copyright} alt=''/> 2019 Janusz Jaskowicz. All rights Reserved.
+                </span>
             </div>
         )
     }
