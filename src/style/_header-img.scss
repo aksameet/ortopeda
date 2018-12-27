@@ -8,31 +8,31 @@
         height: 100%;
         position: relative;
         z-index: 2;
-        border: 1px solid rgba(204, 153, 33, 0.5);
+        border: 1px solid rgba(102, 252, 241, 0.7);
         pointer-events: none;
     }
     &-text {
         @include BigDevice {
-            padding: 25vmin 10vmin 4vmin;
+            padding: 10vmin 10vmin 4vmin;
         }
-        padding: 20vmin 10vmin 2vmin;
+        padding: 8vmin 8vmin 2vmin;
         @include SmallDevice {
-            padding: 18vmin 10vmin 1vmin;
+            padding: 8vmin 4vmin 1vmin;
         }
         z-index: 3;
         h1 {
             vertical-align: bottom;
             color: #FFF;
             text-shadow: 0 0 3px rgba(51, 51, 51, 0.7);
-            font-size: 5vmin;
+            font-size: 3.5vmin;
             font-family: 'Cormorant Garamond', serif;
-            line-height: 1.3;
+            line-height: 28px;
         }
         .ghandi {
             line-height: 4;
             font-family: 'Playfair Display', serif;
             color: rgba(51, 51, 51, 0.9);
-            font-size: 3.6vmin;
+            font-size: 2vmin;
             text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
         }
     }
