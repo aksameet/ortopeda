@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/logo4.png';
 
 import $ from 'jquery';
 import _ from 'lodash';
@@ -34,7 +33,6 @@ export default class NavBar extends Component {
 	}
 
 	stickyNav = () => {
-		// let $navCube = $('.nav-cube').get(0);
 		let $navCubePosition = $('.nav-cube').get(0).offsetTop;
 
 		console.log();
@@ -55,9 +53,6 @@ export default class NavBar extends Component {
 				<div className={`nav-cube ${this.state.isActive ? 'on' : ''} ${this.state.isSticky ? 'sticky' : ''}`}
 					onClick={this.hamburgerIcon}>
 					<span></span>
-				</div>
-				<div className="logo-cube">
-					<img src={logo} alt="" />
 				</div>
 				<nav className={`navbar navbar-expand-sm navbar-light active ${this.state.isSticky ? 'stickyNav' : ''}`}>
 					<div className="navbar-nav">

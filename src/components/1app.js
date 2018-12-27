@@ -13,8 +13,8 @@ export default class App extends Component {
 			<div className=''>
 				<NavBar />
 				<HeaderImg />
-				<Obszary />
 				<About />
+				<Obszary />
 				<Zakres />
 				<Gabinet />
 				<Footer />

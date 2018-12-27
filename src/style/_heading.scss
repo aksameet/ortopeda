@@ -1,0 +1,19 @@
+.about {
+    .heading-title {
+        @include WrapperSizing;
+        display: flex;
+        flex-wrap: wrap;
+        h2 {
+            $color: rgb(102, 252, 241);
+            $border: 1px solid #fff;
+            $shadow: 0 0 3px rgba(255, 255, 255, .3);
+            $align: center;
+            $variants: ( $color, $border, $shadow, $align);
+            @include Header ($variants);
+        }
+        p {
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+    }
+}

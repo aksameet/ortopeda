@@ -18,7 +18,7 @@
     .nav-link {
         background-color: transparent;
         flex: 1;
-        border: 1px solid rgba(102, 252, 241, 0.7);
+        border: 1px solid rgba(102, 252, 241, 0.9);
         text-transform: uppercase;
         @media(min-width: 768px) {
             padding: 1.4rem;
@@ -29,7 +29,7 @@
     }
     &.active {
         display: block;
-        background-color: rgba(69, 162, 158, 0.7);
+        background-color: rgba(69, 162, 158, 0.9);
     }
 }
 
@@ -44,11 +44,12 @@
 .navbar-light .navbar-nav .nav-link {
     color: white;
     text-shadow: 0 0 2px rgba(226, 152, 121, 0.4);
+    cursor: pointer;
     @media (max-width: 1000px) {
-        font-size: 14px;
+        font-size: 13px;
     }
     @media (max-width: 890px) {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
@@ -69,9 +70,9 @@
     top: 3vmin;
     right: 3vmin;
     z-index: 100;
-    background-color: rgba(50, 55, 63, 0.8);
+    background-color: rgba(50, 55, 63, 1);
     cursor: pointer;
-    border: 1px solid rgba(69, 162, 158, 0.7);
+    border: 1px solid rgba(69, 162, 158, 0.8);
 }
 
 .sticky {
@@ -131,31 +132,5 @@
             transition: transform 0.4s ease-in-out;
             transform: rotateX(0deg);
         }
-    }
-}
-
-.logo-cube {
-    display: flex;
-    width: 5vmin;
-    height: 5vmin;
-    @include MediumDevice {
-        width: 4vmin;
-        height: 4vmin;
-    }
-    @include SmallDevice {
-        width: 6vmin;
-        height: 6vmin;
-    }
-    position: absolute;
-    top: 3vmin;
-    left: 3vmin;
-    z-index: 1000;
-    background-color: rgba(50, 55, 63, 0.8);
-    cursor: pointer;
-    border: 1px solid rgba(69, 162, 158, 0.7);
-    img {
-        margin: auto;
-        width: 80%;
-        height: 80%;
     }
 }

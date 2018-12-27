@@ -12,12 +12,13 @@
     }
     &-header {
         $color: rgb(255, 255, 255);
-        $border: 2px solid rgb(220, 222, 214);
-        $shadow: 0 0 3px rgb(141, 141, 141);
+        $border: 1px solid rgb(220, 222, 214);
+        $shadow: 0 0 2px rgb(141, 141, 141);
         $align: right;
         $variants: ( $color, $border, $shadow, $align);
         @include Header ($variants);
         margin-bottom: 0;
+        border-radius: 3px;
     }
     &-item {
         color: rgb(241, 242, 243);

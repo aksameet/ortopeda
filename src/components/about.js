@@ -12,6 +12,14 @@ export default class About extends Component {
     render() {
         return (
             <div className="about" id="about">
+                <div className="heading-title">
+                    <h2>
+                        <span>
+                            <p>Specjalistyczna Praktyka Lekarska</p>
+                            <p>Janusz Jaskowicz</p>
+                        </span>
+                    </h2>
+                </div>
                 <div className='about-wrapper'>
                     <h2 className='about-header'>
                         <span>O mnie</span>
@@ -34,7 +42,6 @@ export default class About extends Component {
                         {`${this.state.isActive ? 'Zwiń' : 'Czytaj dalej'}`}
                     </button>
                 </div>
-                <img className='about-ortho-img' src={Images.ortho} alt="" />
             </div>
         )
     }

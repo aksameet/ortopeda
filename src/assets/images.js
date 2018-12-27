@@ -5,7 +5,6 @@ import ramie from './images/ramie.png';
 import taping from './images/taping.png';
 import teddy from './images/teddy.png';
 import profilowe from './images/janusz_jaskowicz.jpg';
-import ortho from './images/ortho.png';
 
 export default {
     xray: xray,
@@ -15,5 +14,4 @@ export default {
     teddy: teddy,
     taping: taping,
     profilowe: profilowe,
-    ortho: ortho
 }
