@@ -1,6 +1,5 @@
 .obszary {
     width: 100%;
-    // background-color: rgb(31, 40, 51);
     background-color: #fff;
     position: relative;
     &-wrapper {
@@ -9,6 +8,9 @@
         flex-wrap: wrap;
         @include MediumDevice {
             padding-bottom: 0;
+        }
+        @include SmallDevice {
+            padding-bottom: 8vmin;
         }
     }
     &-header {
