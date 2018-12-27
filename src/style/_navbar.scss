@@ -9,7 +9,7 @@
         left: 20vmin;
         right: 20vmin;
     }
-    z-index: 3;
+    z-index: 1001;
     overflow: hidden;
     text-align: center;
     justify-content: space-between;
@@ -39,6 +39,10 @@
     top: 3vmin;
     left: 15vmin;
     right: 15vmin;
+    @include MediumDevice {
+        left: 17vmin;
+        right: 17vmin;
+    }
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -56,15 +60,15 @@
 // ************* CUBES *************
 .nav-cube {
     display: flex;
-    width: 5vmin;
-    height: 5vmin;
+    width: 6vmin;
+    height: 6vmin;
     @include MediumDevice {
-        width: 4vmin;
-        height: 4vmin;
+        width: 8vmin;
+        height: 8vmin;
     }
     @include SmallDevice {
-        width: 6vmin;
-        height: 6vmin;
+        width: 14vmin;
+        height: 14vmin;
     }
     position: absolute;
     top: 3vmin;
@@ -77,7 +81,7 @@
 
 .sticky {
     position: fixed !important;
-    z-index: 100;
+    z-index: 1001;
     top: 3vmin;
     right: 3vmin;
 }
