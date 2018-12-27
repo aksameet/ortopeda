@@ -55,7 +55,11 @@
                     font-size: 16px;
                 }
                 @include SmallDevice {
+                    padding: 0 5px;
                     font-size: 14px;
+                }
+                @media (max-width: 420px) {
+                    font-size: 12px;
                 }
                 &>span {
                     text-align: center;
@@ -77,6 +81,9 @@
                 }
                 @include SmallDevice {
                     font-size: 12px;
+                }
+                @media (max-width: 420px) {
+                    font-size: 9px;
                 }
             }
         }
