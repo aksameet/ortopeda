@@ -61,6 +61,11 @@
             display: block;
             color: rgb(11, 12, 16);
             font-size: 18px;
+            line-height: 25px;
+            @include SmallDevice {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 }
