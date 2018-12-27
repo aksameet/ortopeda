@@ -24,15 +24,15 @@
     z-index: 2;
     font-family: 'Rambla', sans-serif;
     font-weight: bold;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
     font-size: 6vmin;
-    margin-bottom: 80px;
+    margin-bottom: 8vmin;
     color: nth($variants, 1);
     text-shadow: nth($variants, 3);
     text-align: nth($variants, 4);
     span {
-        padding: 2vmin;
+        padding: 2vmin 0;
         display: inline-block;
         min-width: 50%;
         border-top: nth($variants, 2);
@@ -51,9 +51,11 @@
     }
     @media(max-width: 850px) {
         padding: 6vmin 2vw;
+        width: 89.5%;
     }
     @media(max-width: 500px) {
         padding: 8vmin 1vw;
+        max-width: 94%;
     }
 }
 
@@ -102,23 +104,5 @@
     }
     @media(max-width: 790px) {
         height: 265px;
-    }
-    @media(max-width: 720px) {
-        height: 240px;
-    }
-    @media(max-width: 670px) {
-        height: 210px;
-    }
-    @media(max-width: 640px) {
-        height: 190px;
-    }
-    @media(max-width: 620px) {
-        height: 175px;
-    }
-    @media(max-width: 600px) {
-        height: 160px;
-    }
-    @media(max-width: 500px) {
-        height: 130px;
     }
 }

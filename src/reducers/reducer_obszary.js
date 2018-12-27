@@ -52,7 +52,7 @@ export default () => [
     },
     { 
         obszar: 'Medycyna Manualna',
-        img: Images.manualna,
+        img: Images.ramie,
         content: () => {
             return (
                 <div className="obszary-content-description">
@@ -65,7 +65,7 @@ export default () => [
     },
     { 
         obszar: 'Badanie Bioderek niemowląt',
-        img: Images.teddy,
+        img: Images.ramie,
         content: () => {
             return (
                 <div className="obszary-content-description">

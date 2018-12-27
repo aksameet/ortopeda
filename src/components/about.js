@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Gabinet from '../containers/gabinety';
 import Images from '../assets/images.js';
 
 export default class About extends Component {
@@ -20,6 +21,7 @@ export default class About extends Component {
                         </span>
                     </h2>
                 </div>
+                <Gabinet />
                 <div className='about-wrapper'>
                     <h2 className='about-header'>
                         <span>O mnie</span>

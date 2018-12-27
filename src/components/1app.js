@@ -4,7 +4,6 @@ import HeaderImg from '../containers/header_img';
 import Obszary from '../containers/obszary';
 import About from './about';
 import Zakres from '../containers/zakresUslug';
-import Gabinet from '../containers/gabinety';
 import Footer from '../components/footer';
 
 export default class App extends Component {
@@ -16,7 +15,6 @@ export default class App extends Component {
 				<About />
 				<Obszary />
 				<Zakres />
-				<Gabinet />
 				<Footer />
 			</div>
 		);

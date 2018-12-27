@@ -3,10 +3,15 @@
     background-color: rgb(31, 40, 51);
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
     &-wrapper {
         @include WrapperSizing;
         display: flex;
         flex-wrap: wrap;
+        @include MediumDevice {
+            flex-direction: column;
+        }
     }
     &-header {
         $color: rgb(102, 252, 241);
@@ -15,12 +20,19 @@
         $align: right;
         $variants: ($color, $border, $shadow, $align);
         @include Header ($variants);
+        @include MediumDevice {
+            order: 1;
+        }
     }
     &-portrait {
         width: 35%;
         display: flex;
         position: relative;
         z-index: 2;
+        @include MediumDevice {
+            order: 2;
+            width: 100%;
+        }
         &-circle {
             width: 100%;
             @include AboutPictureResizing;
@@ -30,6 +42,11 @@
             border-radius: 50%;
             border: 4px solid rgb(242, 243, 238);
             box-shadow: 0px 0px 10px 2px rgba(226, 152, 121, 0.7);
+            @include MediumDevice {
+                width: 150px;
+                height: 150px;
+                margin: auto auto 8vmin;
+            }
         }
         img {
             height: 100%;
@@ -40,9 +57,11 @@
     &-content {
         max-width: calc(65% - 60px);
         margin-right: 60px;
-        @media(max-width: 670px) {
-            max-width: calc(65% - 40px);
-            margin-right: 40px;
+        @include MediumDevice {
+            order: 3;
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
         }
         h3 {
             font-size: 40px;
@@ -77,11 +96,14 @@
             margin-top: 40px;
             padding: 10px 20px;
             color: #fff;
-            background-color: rgb(186, 87, 71);
-            border: 2px solid rgb(148, 81, 74);
+            background-color: rgb(69, 162, 158);
+            border: 2px solid rgb(102, 252, 241);
             border-radius: 3px;
             position: relative;
             z-index: 2;
+            @include MediumDevice {
+                order: 4;
+            }
             &:hover {
                 cursor: pointer;
             }
@@ -89,8 +111,8 @@
                 outline: 0;
             }
             &:active {
-                background-color: rgb(148, 81, 74);
-                border: 2px solid rgb(186, 87, 71);
+                background-color: rgb(102, 252, 241);
+                border: 2px solid rgb(69, 162, 158);
             }
         }
     }

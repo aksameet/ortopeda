@@ -96,9 +96,6 @@ class Gabinety extends Component {
         return (
             <div className='gabinet' id='gabinet'>
                 <div className='gabinet-wrapper'>
-                    <h1 className='gabinet-header'>
-                        <span>Gabinety</span>
-                    </h1>
                     <div className='gabinet-item'>
                         <div className='gabinet-item-buttons'>
                             <button 

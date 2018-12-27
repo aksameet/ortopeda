@@ -6,6 +6,9 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        @include MediumDevice {
+            padding-top: 0;
+        }
     }
     &-header {
         $color: rgb(11, 12, 16);
@@ -18,11 +21,14 @@
     &-item {
         width: 50%;
         display: flex;
-        margin-bottom: 60px;
+        margin-bottom: 4vmin;
         @media(max-width: 775px) {
             width: 100%;
-            padding: 20px;
+            padding: 2vmin;
             margin-bottom: 0;
+        }
+        @media(max-width: 500px) {
+            padding: 2vmin 0 1vmin;
         }
         &> :nth-child(even) {
             padding-right: 2vw;
@@ -33,34 +39,28 @@
         &-img {
             margin: auto 0;
             display: block;
-            border-radius: 50%;
-            border: 7px solid;
             padding: 7px;
             img {
-                border-radius: 50%;
-                width: 80px;
-                height: 80px;
+                width: 50px;
+                height: 50px;
                 margin: 0;
                 @media(max-width: 775px) {
-                    width: 50px;
-                    height: 50px;
+                    width: 30px;
+                    height: 30px;
                 }
+            }
+            @media(max-width: 500px) {
+                padding-left: 0;
             }
         }
         &-description {
-            margin: auto 0 auto 35px;
+            margin: auto 3vmin auto 2vmin;
             @media(max-width: 775px) {
                 margin: auto 0 auto 15px;
-                text-shadow: 0 0 1px rgba(86, 97, 102, 1);
-                color: rgb(188, 90, 78);
             }
             display: block;
-            color: rgb(122, 122, 122);
-            font-family: 'Cormorant Garamond',
-            serif;
-            font-weight: bold;
-            font-style: italic;
-            font-size: 22px;
+            color: rgb(11, 12, 16);
+            font-size: 18px;
         }
     }
 }
