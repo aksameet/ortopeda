@@ -22,9 +22,9 @@ class HeaderImg extends Component {
                     <div className="main-img-text">
                         <h1>
                             Dobry lekarz<br />
-                            <strong>leczy schorzenie,</strong>
+                            <strong>leczy chorobę,</strong>
                             <br />wybitny<br />
-                            <strong>pacjenta, który ma schorzenie</strong>.
+                            <strong>pacjenta, który zachorował.</strong>.
                             <br />
                             <i className="ghandi">- William Osler</i>
                         </h1>

@@ -2,7 +2,7 @@ import badanie from './icons/badanie.png';
 import narzadRuchu from './icons/narzad-ruchu.png';
 import interpretacja from './icons/interpretacja.png';
 import usg from './icons/usg.svg';
-import usgNiemowlat from './icons/usgNiemowlat.png';
+import usgNiemowlat from './icons/usgNiemowlat.svg';
 import operacyjne from './icons/operacyjne.png';
 import rehab from './icons/rehab.png';
 import manual from './icons/manual.png';

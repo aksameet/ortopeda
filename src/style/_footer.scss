@@ -6,7 +6,7 @@
     font-size: 15px;
     display: flex;
     span {
-        max-width: 1100px;
+        max-width: $content-width;
         padding: 4vmin;
         margin: auto 0 auto auto;
     }

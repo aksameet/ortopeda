@@ -2,24 +2,34 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { wybierzObszar } from '../actions/index';
 import { bindActionCreators } from 'redux';
+import $ from 'jquery';
 
 import Obszar from '../components/obszar';
 
 class Obszary extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+			isActive : false
+		}
+    }
+    onObszarClick(e, obszar) {
+        const $itemClicked = $(e.target);
+
+        $itemClicked.addClass('on').siblings().removeClass('on');
+
+        this.props.wybierzObszar(obszar);
+    }
     renderTitles() {
         return (
             this.props.obszary.map((obszar, idx) => {
 				return (
 					<li 
 						key={obszar.obszar}
-						onClick={() => this.props.wybierzObszar(obszar)}
-						className='obszary-list-item'> 
-                            <div className='obszary-list-item-number'>
-                                <span>{idx + 1}</span>
-                            </div> 
-                            <span className='obszary-list-item-obszar'>
-                                <p>{obszar.obszar}</p>
-                            </span>
+						onClick={(e) => this.onObszarClick(e, obszar)}
+						className='obszary-list-item'>
+                            {obszar.obszar}
 					</li>
 				)
             })

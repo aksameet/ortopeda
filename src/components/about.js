@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Gabinet from '../containers/gabinety';
 import Images from '../assets/images.js';
 
 export default class About extends Component {
@@ -13,15 +12,6 @@ export default class About extends Component {
     render() {
         return (
             <div className="about" id="about">
-                <div className="heading-title">
-                    <h2>
-                        <span>
-                            <p>Specjalistyczna Praktyka Lekarska</p>
-                            <p>Janusz Jaskowicz</p>
-                        </span>
-                    </h2>
-                </div>
-                <Gabinet />
                 <div className='about-wrapper'>
                     <h2 className='about-header'>
                         <span>O mnie</span>
@@ -39,9 +29,10 @@ export default class About extends Component {
                         </div>
                     </div>
                     <button 
-                        className='about-content-read_more'
+                        className={`about-content-read_more ${this.state.isActive ? 'active' : ''}`}
                         onClick={() => this.setState({isActive: !this.state.isActive})}>
                         {`${this.state.isActive ? 'Zwiń' : 'Czytaj dalej'}`}
+                        <img alt="" src={Images.arrowDown}></img>
                     </button>
                 </div>
             </div>

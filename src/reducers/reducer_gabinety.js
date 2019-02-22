@@ -17,7 +17,7 @@ export default () => [
             return (
                 <div>
                     <h2>Gabinet w Międzyrzeczu</h2>
-                    <p>Międzyrzecz ul. Rynek 2</p>
+                    <p><a href="https://goo.gl/maps/DrP4Q5XZt432">Międzyrzecz ul. Rynek 2</a></p>
                     <p>Czynny w poniedziałki </p>
                     <p>od godz. 15:00</p>
                     <p className="smaller">(Przyjęcia bez konieczności wcześniejszej rejestracji)</p>
@@ -26,8 +26,8 @@ export default () => [
         }
     },
     { 
-        miasto: 'XXX',
-        obszar: 'Gabinet w XXX', 
+        miasto: '',
+        obszar: '', 
         img: '',
         centerLatLan: {
             lat: 52.444893670786215,

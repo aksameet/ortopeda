@@ -1,35 +1,23 @@
-.about {
-    .heading-title {
-        padding: 10vmin 0 0;
-        box-sizing: content-box;
-        margin: auto;
-        width: 89.5%;
-        @media(max-width: 1100px) {
-            padding: 8vmin 0 0;
-        }
-        @media(max-width: 850px) {
-            padding: 6vmin 0 0;
-        }
-        @media(max-width: 500px) {
-            padding: 8vmin 0 0;
-            max-width: 94%;
-        }
-        display: flex;
-        flex-wrap: wrap;
-        h2 {
-            $color: rgb(102, 252, 241);
-            $border: 1px solid #fff;
-            $shadow: 0 0 3px rgba(255, 255, 255, .3);
-            $align: center;
-            $variants: ( $color, $border, $shadow, $align);
-            @include Header ($variants);
-        }
-        span {
-            width: 100%;
-        }
-        p {
-            letter-spacing: 1px;
-            margin-bottom: 0;
-        }
+.heading-title {
+    padding: 80px 20px 0;
+    margin: auto;
+    width: 100%;
+    max-width: $content-width;
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+        $color: rgb(102, 252, 241);
+        $border: 1px solid #fff;
+        $shadow: 0 0 3px rgba(255, 255, 255, .3);
+        $align: center;
+        $variants: ( $color, $border, $shadow, $align);
+        @include Header ($variants);
+    }
+    span {
+        width: 100%;
+    }
+    p {
+        letter-spacing: 1px;
+        margin-bottom: 0;
     }
 }

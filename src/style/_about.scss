@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     &-wrapper {
+        padding-bottom: 40px!important;
         @include WrapperSizing;
         display: flex;
         flex-wrap: wrap;
@@ -92,27 +93,36 @@
             }
         }
         &-read_more {
-            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
             margin-top: 40px;
             padding: 10px 20px;
             color: #fff;
-            background-color: rgb(69, 162, 158);
-            border: 2px solid rgb(102, 252, 241);
+            background-color: rgb(31, 40, 51);
+            border: 0;
+            border-top: 1px solid #dcded6;
             border-radius: 3px;
             position: relative;
             z-index: 2;
+            img {
+                display: block;
+                width: 22px;
+                height: 22px;
+                margin: 10px auto;
+                transition: transform .2s ease-in;
+            }
             @include MediumDevice {
                 order: 4;
             }
             &:hover {
                 cursor: pointer;
             }
-            &:focus {
-                outline: 0;
-            }
-            &:active {
-                background-color: rgb(102, 252, 241);
-                border: 2px solid rgb(69, 162, 158);
+            &.active {
+                img {
+                    transition: transform .2s ease-out;
+                    transform: rotate(180deg);
+                }
             }
         }
     }
@@ -122,10 +132,10 @@
             max-height: 600px;
         }
         overflow: hidden;
-        transition: max-height 0.35s ease-in-out;
+        transition: max-height 0.3s ease-in;
     }
     .on {
         max-height: 2000px;
-        transition: max-height 0.35s ease-in-out;
+        transition: max-height 0.3s ease-out;
     }
 }

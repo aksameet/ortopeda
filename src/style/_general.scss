@@ -17,3 +17,13 @@ body {
 *:after {
     box-sizing: inherit;
 }
+
+.main {
+    background-color: rgb(31, 40, 51);
+}
+
+button {
+    &:focus {
+        outline: 0;
+    }
+}

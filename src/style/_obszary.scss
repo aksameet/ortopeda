@@ -24,8 +24,6 @@
     // ** Color Buttons **
     &-list {
         width: 35%;
-        height: 400px;
-        @include listNumbersColors;
         padding-left: 0;
         display: flex;
         flex-direction: column;
@@ -33,60 +31,40 @@
         box-sizing: border-box;
         &-item {
             display: flex;
-            flex: 1;
             position: relative;
             z-index: 2;
             list-style: none;
             background-color: rgb(46, 44, 44);
+            border: 2px solid rgba(69, 162, 158, 0.8);
+            border-radius: 4px;
             color: rgb(197, 198, 199);
-            margin-bottom: 3px;
+            margin-bottom: 10px;
+            padding: 20px;
+            font-size: 18px;
+            @include MediumDevice {
+                font-size: 14px;
+                padding: 15px
+            }
+            @include SmallDevice {
+                font-size: 12px;
+                padding: 10px;
+            }
+            @media (max-width: 420px) {
+                font-size: 9px;
+            }
             &:hover {
                 cursor: pointer;
                 background-color: rgb(77, 84, 102);
                 z-index: 3;
             }
-            &-number {
-                box-sizing: border-box;
-                height: 100%;
-                padding: 20px;
-                color: #fff;
-                font-size: 1.6vmin;
-                display: flex;
-                @include MediumDevice {
-                    padding: 0 10px;
-                    font-size: 16px;
-                }
-                @include SmallDevice {
-                    padding: 0 5px;
-                    font-size: 14px;
-                }
-                @media (max-width: 420px) {
-                    font-size: 12px;
-                }
-                &>span {
-                    text-align: center;
-                    width: 20px;
-                    margin: auto;
-                }
-            }
-            &-obszar {
-                display: flex;
-                padding-left: 20px;
-                font-size: 1.4vmin;
-                height: 100%;
-                p {
-                    margin: auto 0;
-                }
-                @include MediumDevice {
-                    padding: 0 10px;
-                    font-size: 14px;
-                }
-                @include SmallDevice {
-                    font-size: 12px;
-                }
-                @media (max-width: 420px) {
-                    font-size: 9px;
-                }
+            &.on {
+                $color-tale: rgb(69, 162, 158);
+                background-color: #fff;
+                color: rgb(46, 44, 44);
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-image: linear-gradient( to right, $color-tale, #fff) 10% 1;
             }
         }
     }

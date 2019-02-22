@@ -34,7 +34,7 @@ class Gabinety extends Component {
             };
 
 		// Asynchronously render google map
-		AsyncMap("https://maps.googleapis.com/maps/api/js?key=AIzaSyC2iE3NM9sgpBszFSA32o64gnaO_fr6psw", function() {
+		AsyncMap("https://maps.googleapis.com/maps/api/js?key=AIzaSyCCr4mBsQAmSFXr6H3fNlRucjLdWjGrG_w", function() {
 
             new google.maps.LatLng(myLatLng);
 
@@ -94,29 +94,39 @@ class Gabinety extends Component {
 			this.renderNewLocation();
 		}
         return (
-            <div className='gabinet' id='gabinet'>
-                <div className='gabinet-wrapper'>
-                    <div className='gabinet-item'>
-                        <div className='gabinet-item-buttons'>
-                            <button 
-                                value='0'
-                                onClick={this.targetGabinet}
-                                className={this.state.isActive ? '' : 'active'}>
-                                {this.props.gabinety[0].miasto}
-                            </button>
-                            <button
-                                value='1'
-                                onClick={this.targetGabinet}
-                                className={this.state.isActive ? 'active' : ''}>
-                                {this.props.gabinety[1].miasto}
-                            </button>
-                        </div>
-                        <Gabinet gabinety={this.props.gabinety} gabinet={this.props.gabinet} />
-                    </div>
+            <div>
+                <div className="heading-title">
+                    <h2>
+                        <span>
+                            <p>Specjalistyczna Praktyka Lekarska</p>
+                            <p>Janusz Jaskowicz</p>
+                        </span>
+                    </h2>
                 </div>
-                <div className='gabinet-map' ref='map'>
-                        Loading Map...
+                <div className='gabinet' id='gabinet'>
+                    <div className='gabinet-wrapper'>
+                        <div className='gabinet-item'>
+                            <div className='gabinet-item-buttons'>
+                                {/* <button 
+                                    value='0'
+                                    onClick={this.targetGabinet}
+                                    className={this.state.isActive ? '' : 'active'}>
+                                    {this.props.gabinety[0].miasto}
+                                </button> */}
+                                {/* <button
+                                    value='1'
+                                    onClick={this.targetGabinet}
+                                    className={this.state.isActive ? 'active' : ''}>
+                                    {this.props.gabinety[1].miasto}
+                                </button> */}
+                            </div>
+                            <Gabinet gabinety={this.props.gabinety} gabinet={this.props.gabinet} />
+                        </div>
                     </div>
+                    <div className='gabinet-map' ref='map'>
+                            Loading Map...
+                        </div>
+                </div>
             </div>
         )
     }

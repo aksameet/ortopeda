@@ -5,15 +5,16 @@
     overflow: hidden;
     &-wrapper {
         width: 100%;
+        max-width: $content-width;
+        margin: auto;
         height: 100%;
         position: relative;
         z-index: 2;
-        border: 1px solid rgba(102, 252, 241, 0.7);
         pointer-events: none;
     }
     &-text {
         @include BigDevice {
-            padding: 10vmin 10vmin 4vmin;
+            padding: 80px 20px 40px;
         }
         padding: 8vmin 8vmin 2vmin;
         @include SmallDevice {
@@ -23,9 +24,9 @@
         h1 {
             vertical-align: bottom;
             color: #FFF;
-            font-size: 3.5vmin;
+            font-size: 45px;
             font-family: 'Cormorant Garamond', serif;
-            line-height: 32px;
+            line-height: 55px;
             @include SmallDevice {
                 font-size: 26px;
                 line-height: 32px;
