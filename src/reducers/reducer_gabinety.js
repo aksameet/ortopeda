@@ -16,7 +16,7 @@ export default () => [
         content: () => {
             return (
                 <div>
-                    <h2>Gabinet w Międzyrzeczu</h2>
+                    <h2>Gabinet - Międzyrzecz</h2>
                     <p><a href="https://goo.gl/maps/DrP4Q5XZt432">Międzyrzecz ul. Rynek 2</a></p>
                     <p>Czynny w poniedziałki </p>
                     <p>od godz. 15:00</p>

@@ -14,7 +14,7 @@ export default (props) => {
     return (
         <div className="obszary-content">
             {props.obszar.content()}
-            <img className="obszary-content-img" src={props.obszar.img} alt="" />
+            <img className="obszary-content-img" src={props.obszar.img} alt="Ortopeda Jaskowicz Międzyrzecz Obszary Specjalizacji" />
         </div>
     )
 }

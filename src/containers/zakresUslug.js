@@ -6,7 +6,7 @@ class ZakresUslug extends Component {
         return (
             <div className='zakres-item' key={zakres.zakres}>
                 <div className='zakres-item-img'>
-                    <img src={zakres.img} alt=""/>
+                    <img src={zakres.img} alt="Ortopeda Międzyrzecz Zakres Usług"/>
                 </div>
                 <span className='zakres-item-description'>{zakres.zakres}</span>
             </div>

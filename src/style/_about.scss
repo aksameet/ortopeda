@@ -100,9 +100,10 @@
             padding: 10px 20px;
             color: #fff;
             background-color: rgb(31, 40, 51);
-            border: 0;
             border-top: 1px solid #dcded6;
-            border-radius: 3px;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
             position: relative;
             z-index: 2;
             img {
@@ -132,10 +133,10 @@
             max-height: 600px;
         }
         overflow: hidden;
-        transition: max-height 0.3s ease-in;
+        transition: max-height 0.4s ease-in;
     }
     .on {
         max-height: 2000px;
-        transition: max-height 0.3s ease-out;
+        transition: max-height 0.4s ease-out;
     }
 }

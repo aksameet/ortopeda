@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { wybierzObszar } from '../actions/index';
 import { bindActionCreators } from 'redux';
+import Images from '../assets/images.js';
 import $ from 'jquery';
 
 import Obszar from '../components/obszar';
@@ -16,9 +17,7 @@ class Obszary extends Component {
     }
     onObszarClick(e, obszar) {
         const $itemClicked = $(e.target);
-
-        $itemClicked.addClass('on').siblings().removeClass('on');
-
+        $itemClicked.addClass('on').removeClass('off').siblings().removeClass('on').addClass('off');
         this.props.wybierzObszar(obszar);
     }
     renderTitles() {
@@ -30,6 +29,7 @@ class Obszary extends Component {
 						onClick={(e) => this.onObszarClick(e, obszar)}
 						className='obszary-list-item'>
                             {obszar.obszar}
+                            <img alt="" src={Images.arrowDown}></img>
 					</li>
 				)
             })

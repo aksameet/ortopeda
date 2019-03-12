@@ -15,7 +15,7 @@ class HeaderImg extends Component {
                 <img 
                     className='tilt-effect'
                     src={Images.xray} 
-                    alt='Specjalistyczny Gabinet Lekarski Janusz Jaskowicz'
+                    alt="Specjalistyczny Gabinet Lekarski Janusz Jaskowicz Ortopeda Chirurg Traumatolog Międzyrzecz"
                     data-tilt-options='{ "opacity" : 0.6, "extraImgs" : 4, "movement": { "perspective" : 500, "translateX" : 15, "translateY" : 0, "translateZ" : 10, "rotateX" : 3, "rotateY" : 4, "rotateZ" : 1 } }'
                 />
                 <div className="main-img-wrapper">
@@ -24,7 +24,7 @@ class HeaderImg extends Component {
                             Dobry lekarz<br />
                             <strong>leczy chorobę,</strong>
                             <br />wybitny<br />
-                            <strong>pacjenta, który zachorował.</strong>.
+                            <strong>człowieka który zachorował.</strong>
                             <br />
                             <i className="ghandi">- William Osler</i>
                         </h1>

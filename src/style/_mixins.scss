@@ -35,7 +35,7 @@
         line-height: 42px;
     }
     @include SmallDevice {
-        margin-bottom: 25px;
+        margin-bottom: 35px;
         font-size: 28px;
         line-height: 32px;
     }
@@ -58,11 +58,11 @@
     margin: auto;
     max-width: $content-width;
     @media(max-width: 850px) {
-        padding: 100px 20px;
+        padding: 80px 20px 70px;
         width: 89.5%;
     }
     @media(max-width: 500px) {
-        padding: 80px 15px;
+        padding: 70px 15px 60px;
         max-width: 94%;
     }
 }
