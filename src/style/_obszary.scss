@@ -33,12 +33,15 @@
             position: relative;
             z-index: 2;
             list-style: none;
-            background-color: rgb(46, 44, 44);
             border-radius: 3px;
             color: rgb(197, 198, 199);
             margin-bottom: 10px;
             padding: 20px;
             font-size: 18px;
+            background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
             img {
                 position: absolute;
                 transform: rotate(270deg) translateY(-50%);
@@ -75,21 +78,31 @@
             }
             &:hover {
                 cursor: pointer;
-                background-color: rgb(77, 84, 102);
                 z-index: 3;
+                background-position: left bottom;
+                color: rgb(46, 44, 44);
             }
             &.on,
             &:first-child {
                 background: linear-gradient(to right, $color-tale 0%, rgba(255, 255, 255, 0) 80%);
                 color: rgb(46, 44, 44);
-                border: 2px solid #fff;
                 border-right: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
+                transition: all .5s ease-out;
             }
             &.off {
-                background: rgb(46, 44, 44);
+                background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: all .5s ease-out;
                 color: rgb(197, 198, 199);
+                &:hover {
+                    cursor: pointer;
+                    z-index: 3;
+                    background-position: left bottom;
+                    color: rgb(46, 44, 44);
+                }
             }
         }
     }

@@ -35,14 +35,13 @@
             width: 100%;
         }
         &-circle {
-            width: 100%;
-            @include AboutPictureResizing;
+            width: 280px;
+            height: 280px;
             position: relative;
             overflow: hidden;
-            margin: 60px auto auto;
+            margin: 60px auto auto auto;
             border-radius: 50%;
-            border: 4px solid rgb(242, 243, 238);
-            box-shadow: 0px 0px 10px 2px rgba(226, 152, 121, 0.7);
+            border: 5px solid rgb(242, 243, 238);
             @include MediumDevice {
                 width: 150px;
                 height: 150px;
@@ -50,14 +49,18 @@
             }
         }
         img {
-            height: 100%;
-            width: auto;
-            margin-left: -5vmin;
+            width: 135%;
+            position: absolute;
+            left: -10%;
+            top: 0;
+            display: block;
         }
     }
     &-content {
-        max-width: calc(65% - 60px);
-        margin-right: 60px;
+        max-width: calc(65% - 50px);
+        margin-right: 50px;
+        transition: all .5s ease;
+        padding-bottom: 15px;
         @include MediumDevice {
             order: 3;
             width: 100%;
@@ -96,7 +99,6 @@
             width: 100%;
             box-sizing: border-box;
             display: block;
-            margin-top: 40px;
             padding: 10px 20px;
             color: #fff;
             background-color: rgb(31, 40, 51);
@@ -121,7 +123,7 @@
             }
             &.active {
                 img {
-                    transition: transform .2s ease-out;
+                    transition: transform .2s ease;
                     transform: rotate(180deg);
                 }
             }
@@ -130,13 +132,13 @@
     .off {
         max-height: 400px;
         @include BigDevice {
-            max-height: 600px;
+            max-height: 544px;
         }
         overflow: hidden;
-        transition: max-height 0.4s ease-in;
+        transition: all .5s ease;
     }
     .on {
         max-height: 2000px;
-        transition: max-height 0.4s ease-out;
+        transition: all .5s ease-in-out;
     }
 }

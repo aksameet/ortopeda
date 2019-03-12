@@ -66,23 +66,3 @@
         max-width: 94%;
     }
 }
-
-// PROFILE PICTURE RESIZING
-@mixin AboutPictureResizing {
-    height: 390px;
-    @media(max-width: $content-width) {
-        height: 355px;
-    }
-    @media(max-width: 980px) {
-        height: 325px;
-    }
-    @media(max-width: 920px) {
-        height: 305px;
-    }
-    @media(max-width: 830px) {
-        height: 290px;
-    }
-    @media(max-width: 790px) {
-        height: 265px;
-    }
-}
