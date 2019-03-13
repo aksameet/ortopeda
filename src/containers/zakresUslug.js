@@ -9,6 +9,9 @@ class ZakresUslug extends Component {
                     <img src={zakres.img} alt="Ortopeda Międzyrzecz Zakres Usług"/>
                 </div>
                 <span className='zakres-item-description'>{zakres.zakres}</span>
+                <svg className="zakres-item-svg" x="0px" y="0px" width="300px" height="115px">
+                    <path className="zakres-item-path" fill="transparent" stroke="#45a29e" strokeWidth="2" strokeMiterlimit="10" d="M 75 20 A 40 40 5 1 0 75 70 L 93 108 L 201 108 L 300 108" />
+                </svg>
             </div>
         )
     }

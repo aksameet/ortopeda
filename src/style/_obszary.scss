@@ -41,7 +41,7 @@
             background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
             background-size: 200% 100%;
             background-position: right bottom;
-            transition: all .5s ease-out;
+            transition: all .8s ease-out;
             img {
                 position: absolute;
                 transform: rotate(270deg) translateY(-50%);
@@ -89,13 +89,13 @@
                 border-right: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
-                transition: all .5s ease-out;
+                transition: all .7s ease-out;
             }
             &.off {
                 background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
                 background-size: 200% 100%;
                 background-position: right bottom;
-                transition: all .5s ease-out;
+                transition: all .7s ease-out;
                 color: rgb(197, 198, 199);
                 &:hover {
                     cursor: pointer;
