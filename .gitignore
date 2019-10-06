@@ -9,6 +9,9 @@
 # production
 /build
 
+# private
+src/libs/api-key.js
+
 # misc
 .DS_Store
 .env.local

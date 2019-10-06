@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { AsyncMap } from '../components/googleMap/async_map';
 import MapStyles from '../components/googleMap/map-styles';
 import markerIcon from '../assets/icons/marker.svg';
+import apiKey from '../libs/api-key';
 
 import Gabinet from '../components/gabinet';
 
@@ -34,7 +35,7 @@ class Gabinety extends Component {
             };
 
 		// Asynchronously render google map
-		AsyncMap("https://maps.googleapis.com/maps/api/js?key=AIzaSyCCr4mBsQAmSFXr6H3fNlRucjLdWjGrG_w", function() {
+		AsyncMap(`https://maps.googleapis.com/maps/api/js?key=${apiKey}`, function() {
 
             new google.maps.LatLng(myLatLng);
 

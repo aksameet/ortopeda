@@ -81,6 +81,7 @@
                 z-index: 3;
                 background-position: left bottom;
                 color: rgb(46, 44, 44);
+                transition: all .7s ease-out;
             }
             &.on,
             &:first-child {
@@ -89,7 +90,7 @@
                 border-right: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
-                transition: all .7s ease-out;
+                transition: all .7s ease;
             }
             &.off {
                 background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
@@ -102,6 +103,7 @@
                     z-index: 3;
                     background-position: left bottom;
                     color: rgb(46, 44, 44);
+                    transition: all .7s ease-out;
                 }
             }
         }
