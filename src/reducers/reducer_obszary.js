@@ -52,7 +52,7 @@ export default () => [
     },
     { 
         obszar: 'Medycyna Manualna',
-        img: Images.ramie,
+        img: Images.blank,
         content: () => {
             return (
                 <div className="obszary-content-description">
@@ -65,12 +65,12 @@ export default () => [
     },
     { 
         obszar: 'Badanie Bioderek niemowląt',
-        img: Images.ramie,
+        img: Images.blank,
         content: () => {
             return (
                 <div className="obszary-content-description">
                     <h3>Badanie Bioderek niemowląt</h3>
-                    <p>Do ortopedy dziecięcego dziecko powinno trafić zanim skończy 3 miesiące. Podczas badania ortopeda sprawdza stopień i równomierność odwodzenia bioder, ocenia długość nóżek, dotykiem bada stawy. Obecnie, nawet gdy nic nie wzbudza podejrzeń, zleca się profilaktycznie wykonanie usg stawów biodrowych u dzieci. </p>
+                    <p>Do ortopedy dziecięcego dziecko powinno trafić zanim skończy trzy miesiące. Podczas badania ortopeda sprawdza stopień i równomierność odwodzenia bioder, ocenia długość nóżek, dotykiem bada stawy. Obecnie, nawet gdy nic nie wzbudza podejrzeń, zleca się profilaktycznie wykonanie usg stawów biodrowych u dzieci. </p>
                     <p>To badanie jest całkowicie bezpieczne, można je wykonywać noworodkom. Jeśli lekarz stwierdzi, że niedorozwój stawów jest nieznaczny, zaleca jedynie odpowiednią pielęgnację niemowlaka, co daje szansę na samoistny zanik wady. Jeżeli dysplazja zostanie stwierdzona, nie można zwlekać, ale od razu należy rozpocząć leczenie. Wadę trzeba skorygować zanim niemowlę podejmie próbę chodzenia.</p>
                 </div>
             )

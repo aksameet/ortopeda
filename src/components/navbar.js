@@ -14,6 +14,19 @@ export default class NavBar extends Component {
 		}
 	}
 
+	componentDidMount() {
+		$(window).scroll(() => {
+			let scroll = $(window).scrollTop(),
+				$navContainer = $('.navbar--container');
+			
+			if (scroll > 0) {
+				$navContainer.addClass("off-top");
+			} else {
+				$navContainer.removeClass("off-top");
+			}
+		});
+	}
+	
 	hamburgerIcon = () => {
 		this.setState({isActive: !this.state.isActive});
 	}
@@ -28,7 +41,6 @@ export default class NavBar extends Component {
 	}
 
     render() {
-		
         return (
 			<div className="navbar--container">
 				<div className={`nav-cube ${this.state.isActive ? 'on' : ''}`}
@@ -41,10 +53,8 @@ export default class NavBar extends Component {
 					<button className="nav--link" type="button" href="#About" data-tag="about" onClick={this.smoothScrolling}>O mnie</button>
 					<button className="nav--link" type="button" href="#Obszary" data-tag="obszary" onClick={this.smoothScrolling}>Specjalizacja</button>
 					<button className="nav--link" type="button" href="#Zakres" data-tag="zakres" onClick={this.smoothScrolling}>Zakres Usług</button>
-
 				</nav>
 			</div>
-
         )
     }
 }

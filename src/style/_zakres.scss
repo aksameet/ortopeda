@@ -1,9 +1,25 @@
 .zakres {
     width: 100%;
+    margin-top: -1px;
     background-color: #fff;
     border-top: none;
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: "";
+        background: url('../assets/images/wave-gray.svg');
+        background-size: 100% 100%;
+        opacity: 0.09;
+        top: 0;
+        left: 0;
+        bottom: -33%;
+        right: -13%;
+        position: absolute;
+        transform: rotate(23deg);
+    }
     &-wrapper {
         @include WrapperSizing;
+        max-width: 900px;
         display: flex;
         border-top: none;
         flex-wrap: wrap;
@@ -18,35 +34,32 @@
         @include Header ($variants);
     }
     &-item {
-        width: 50%;
+        width: calc(100% / 3.8);
         display: flex;
-        margin-bottom: 40px;
+        flex-direction: column;
+        margin: 0 auto 80px;
         position: relative;
         @media(max-width: 775px) {
             width: 100%;
             padding: 20px;
-            margin-bottom: 0;
+            margin-bottom: 60px;
         }
         @media(max-width: 500px) {
             padding: 12px 0;
+            margin-bottom: 40px;
         }
-        &> :nth-child(even) {
-            padding-right: 2vw;
-            @media(max-width: 775px) {
-                padding-right: 0;
-            }
-        }
+
         &-img {
-            margin: auto 0;
+            margin: 0 auto;
             display: block;
             padding: 7px;
             img {
-                width: 50px;
-                height: 50px;
+                width: 120px;
+                height: 120px;
                 margin: 0;
                 @media(max-width: 775px) {
-                    width: 40px;
-                    height: 40px;
+                    width: 100px;
+                    height: 100px;
                 }
             }
             @media(max-width: 500px) {
@@ -54,10 +67,13 @@
             }
         }
         &-description {
-            margin: auto 3vmin auto 2vmin;
+            font-family: 'Lato';
+            text-align: center;
+            margin: 40px auto 0;
             @media(max-width: 775px) {
-                margin: auto 0 auto 15px;
+                margin: 25px auto 0;
             }
+            
             display: block;
             color: #252523;
             font-size: 18px;
@@ -65,32 +81,6 @@
             @include SmallDevice {
                 font-size: 16px;
                 line-height: 22px;
-            }
-        }
-        &-svg {
-            position: absolute;
-            top: 68%;
-            transform: translate(0, -50%);
-            left: -11px;
-            @include MediumDevice {
-                display: none;
-            }
-        }
-        &-path {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-        }
-        @keyframes dash {
-            from {
-                stroke-dashoffset: 1000;
-            }
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-        &:hover {
-            .zakres-item-path {
-                animation: dash 3s linear alternate 1;
             }
         }
     }

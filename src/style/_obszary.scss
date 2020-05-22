@@ -7,6 +7,7 @@
     border-bottom: none;
     &-wrapper {
         @include WrapperSizing;
+        max-width: 980px;
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 0;
@@ -14,7 +15,7 @@
     }
     &-header {
         $color: rgb(11, 12, 16);
-        $border: 2px solid #333;
+        $border: 1px solid #333;
         $shadow: 0 0 3px rgba(255, 255, 255, 1);
         $align: left;
         $variants: ( $color, $border, $shadow, $align);
@@ -35,21 +36,18 @@
             list-style: none;
             border-radius: 3px;
             color: rgb(197, 198, 199);
-            margin-bottom: 10px;
-            padding: 20px;
+            padding: 10px;
             font-size: 18px;
-            background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
-            background-size: 200% 100%;
-            background-position: right bottom;
-            transition: all .8s ease-out;
+
             img {
                 position: absolute;
                 transform: rotate(270deg) translateY(-50%);
                 width: 20px;
                 height: 20px;
-                right: -5px;
+                left: -5px;
                 top: calc(50% - 10px);
                 pointer-events: none;
+                display: none;
             }
             @include MediumDevice {
                 font-size: 14px;
@@ -79,38 +77,26 @@
             &:hover {
                 cursor: pointer;
                 z-index: 3;
-                background-position: left bottom;
-                color: rgb(46, 44, 44);
-                transition: all .7s ease-out;
+                color: #1e4861;
             }
             &.on,
             &:first-child {
-                background: linear-gradient(to right, $color-tale 0%, rgba(255, 255, 255, 0) 80%);
-                color: rgb(46, 44, 44);
-                border-right: none;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                transition: all .7s ease;
+                color: #1e4861;
+                img {
+                    display: block;
+                }
             }
             &.off {
-                background: linear-gradient(to right, white 50%, rgb(46, 44, 44) 50%);
-                background-size: 200% 100%;
-                background-position: right bottom;
-                transition: all .7s ease-out;
-                color: rgb(197, 198, 199);
-                &:hover {
-                    cursor: pointer;
-                    z-index: 3;
-                    background-position: left bottom;
-                    color: rgb(46, 44, 44);
-                    transition: all .7s ease-out;
+                color: rgba(#1e4861, 0.7);
+                img {
+                    display: none;
                 }
             }
         }
     }
     &-content {
-        max-width: calc(65% - 60px);
-        margin-left: 60px;
+        max-width: calc(65% - 100px);
+        margin-left: 100px;
         @include MediumDevice {
             margin-left: 2vmin;
             max-width: calc(65% - 2vmin);
@@ -119,6 +105,7 @@
         overflow: scroll;
         height: 500px;
         &-description {
+            font-family: 'Lato';
             margin: 0 0 auto;
             position: relative;
             z-index: 2;
@@ -131,7 +118,7 @@
                     font-size: 18px;
                 }
                 margin-bottom: 25px;
-                color: rgb(69, 162, 158);
+                color: #1e4861;
             }
             p,
             li {
@@ -152,7 +139,7 @@
                 position: relative;
                 &:before {
                     content: '◆';
-                    color: $color-tale;
+                    color: #1e4861;
                     position: absolute;
                     left: -25px;
                 }

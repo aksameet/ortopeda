@@ -14,9 +14,9 @@ export default class App extends Component {
 				<NavBar />
 				<HeaderImg />
 				<Gabinet />
-				<About />
 				<Obszary />
 				<Zakres />
+				<About />
 				<Footer />
 			</div>
 		);

@@ -5,6 +5,18 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    &:after {
+        content: "";
+        background: url('../assets/images/wave-blue.svg');
+        background-size: cover;
+        opacity: 0.09;
+        top: -30%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }
     &-wrapper {
         padding-bottom: 40px!important;
         @include WrapperSizing;
@@ -12,17 +24,6 @@
         flex-wrap: wrap;
         @include MediumDevice {
             flex-direction: column;
-        }
-    }
-    &-header {
-        $color: rgb(102, 252, 241);
-        $border: 1px solid rgb(220, 222, 214);
-        $shadow: 0 0 1px rgba(86, 97, 102, .5);
-        $align: right;
-        $variants: ($color, $border, $shadow, $align);
-        @include Header ($variants);
-        @include MediumDevice {
-            order: 1;
         }
     }
     &-portrait {
@@ -41,7 +42,7 @@
             overflow: hidden;
             margin: 60px auto auto auto;
             border-radius: 50%;
-            border: 5px solid rgb(242, 243, 238);
+            border: 2px solid rgb(242, 243, 238);
             @include MediumDevice {
                 width: 150px;
                 height: 150px;
@@ -75,7 +76,7 @@
             @include SmallDevice {
                 font-size: 25px;
             }
-            color: rgb(69, 162, 158);
+            color: #ddd;
             margin-bottom: 25px;
         }
         p {
@@ -100,32 +101,19 @@
             box-sizing: border-box;
             display: block;
             padding: 10px 20px;
-            color: #fff;
-            background-color: rgb(31, 40, 51);
+            color: #ccc;
+            background-color: transparent;
             border-top: 1px solid #dcded6;
             border-bottom: none;
             border-left: none;
             border-right: none;
             position: relative;
             z-index: 2;
-            img {
-                display: block;
-                width: 22px;
-                height: 22px;
-                margin: 10px auto;
-                transition: transform .2s ease-in;
-            }
             @include MediumDevice {
                 order: 4;
             }
             &:hover {
                 cursor: pointer;
-            }
-            &.active {
-                img {
-                    transition: transform .2s ease;
-                    transform: rotate(180deg);
-                }
             }
         }
     }

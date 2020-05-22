@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
             <div className='footer' >
                 <span>
-                    <img src={Copyright} alt=''/> 2019 Janusz Jaskowicz. All rights Reserved.
+                    <img src={Copyright} alt=''/> 2020 Janusz Jaskowicz
                 </span>
             </div>
         )

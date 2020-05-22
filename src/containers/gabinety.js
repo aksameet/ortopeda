@@ -95,31 +95,23 @@ class Gabinety extends Component {
 			this.renderNewLocation();
 		}
         return (
-            <div>
-                <div className="heading-title">
-                    <h2>
-                        <span>
-                            <p>Specjalistyczna Praktyka Lekarska</p>
-                            <p>Janusz Jaskowicz</p>
-                        </span>
-                    </h2>
-                </div>
+            <div className='gabinet-root'>
                 <div className='gabinet' id='gabinet'>
                     <div className='gabinet-wrapper'>
                         <div className='gabinet-item'>
                             <div className='gabinet-item-buttons'>
-                                {/* <button 
+                                <button 
                                     value='0'
                                     onClick={this.targetGabinet}
                                     className={this.state.isActive ? '' : 'active'}>
                                     {this.props.gabinety[0].miasto}
-                                </button> */}
-                                {/* <button
+                                </button>
+                                <button
                                     value='1'
                                     onClick={this.targetGabinet}
                                     className={this.state.isActive ? 'active' : ''}>
                                     {this.props.gabinety[1].miasto}
-                                </button> */}
+                                </button>
                             </div>
                             <Gabinet gabinety={this.props.gabinety} gabinet={this.props.gabinet} />
                         </div>
