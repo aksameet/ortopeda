@@ -70,12 +70,12 @@
             font-family: 'Lato';
             text-align: center;
             margin: 40px auto 0;
+            color: #163649;
             @media(max-width: 775px) {
                 margin: 25px auto 0;
             }
             
             display: block;
-            color: #252523;
             font-size: 18px;
             line-height: 25px;
             @include SmallDevice {

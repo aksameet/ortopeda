@@ -16,11 +16,16 @@ export default () => [
         content: () => {
             return (
                 <div>
-                    <h2>Gabinet - Międzyrzecz</h2>
+                    <h2>Gabinet w Międzyrzeczu</h2>
                     <p><a href="https://goo.gl/maps/DrP4Q5XZt432">Międzyrzecz ul. Rynek 2</a></p>
-                    <p>Czynny w poniedziałki </p>
-                    <p>od godz. 15:00</p>
-                    <p className="smaller">(Przyjęcia bez konieczności wcześniejszej rejestracji)</p>
+                    <br />
+                    <p>CZYNNY:</p>
+                    <p>poniedziałek od godz. 15:00</p>
+                    <p>środa 15:00 — 17:00</p>
+                    <hr/>
+                    <p>REJESTRACJA:</p>
+                    <p className="smaller">pon-pt: 9:00 — 16:00</p>
+                    <p className="smaller">tel.: 691 378 686</p>
                 </div>
             )
         }
