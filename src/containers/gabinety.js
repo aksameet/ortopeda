@@ -24,14 +24,14 @@ class Gabinety extends Component {
     }
 
     componentDidMount() {
-		let self = this,
-			myLatLng = {
-                lat: 52.444707,
-                lng: 15.576710,
-            },
+        let self = this,
             centerLatLang = {
-                lat: 52.4460838409867,
-                lng: 15.568335056304932,
+                lat: 52.441407,
+                lng: 15.576710
+            },
+            myLatLng = {
+                lat: 52.442180,
+                lng: 15.580280
             };
 
 		// Asynchronously render google map

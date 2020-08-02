@@ -84,8 +84,11 @@
             left: 0;
         }
         &-buttons {
+            // Switch off
+            display: none;
+            // ##
             width: 100%;
-            display: flex;
+            // display: flex;
             button {
                 color: rgb(197, 198, 199);
                 cursor: pointer;
@@ -124,8 +127,8 @@
             margin-bottom: 5px;
         }
         hr {
-            width: 75%;
-            background-color: #bbb;
+            margin: 35px;
+            background-color: rgba(#aaa, 0.5);
         }
         @include MediumDevice {
             h2 {
